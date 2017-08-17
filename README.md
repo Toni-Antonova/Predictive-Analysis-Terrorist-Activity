@@ -19,6 +19,4 @@ XGBoost
 ***
 #### D3 Visualization To Be Posted Soon 
 
-<kbd>
-  <img src="https://github.com/Toni-Antonova/Predictive-Analysis-Terrorist-Activity/blob/master/d3_preview_1.png">
-</kbd>
+
