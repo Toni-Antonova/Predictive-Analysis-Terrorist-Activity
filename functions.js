@@ -204,11 +204,11 @@ function calcColorScale(data) {
 
   // get values and sort
 
-  // let data_values = Object.values(data).sort( function(a, b){ return a-b; });
+  let data_values = Object.values(data).sort( function(a, b){ return a-b; });
 
-  // quantiles_calc = quantiles.map( function(elem) {
-  //                 return Math.ceil(d3.quantile(data_values, elem));
-  // });
+  quantiles_calc = quantiles.map( function(elem) {
+                 return Math.ceil(d3.quantile(data_values, elem));
+  });
 
   // let scale = d3.scaleQuantile()
   //             .domain(data_values) //quantiles_calc
