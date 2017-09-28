@@ -150,7 +150,6 @@ function renderLegend(color, data) {
 
 }
 
-
 function renderBars(color, data) {
 
   // turn data into array of objects
@@ -159,8 +158,16 @@ function renderBars(color, data) {
     array.push({'id':key, 'value': data[key]})
   }
 
-  // sort by value
-  array = sortArrObj(array, 'value');
+  // sort by value, how many bars to show
+  if (svgBarsWidth <= 500) {
+      barfont = "8pt";
+      array = sortArrObj(array, 'value', 15);}
+  else if (svgBarsWidth > 500 & svgBarsWidth <=800) {
+      barfont = "8pt";
+      array = sortArrObj(array, 'value', 30);}
+  else{
+      barfont = "9pt";
+      array = sortArrObj(array, 'value', 30);}
 
   x.domain(array.map(function(d) {return d.id;}));
   y.domain([0, d3.max(Object.values(data), function(d) {return d;})]);
@@ -193,6 +200,7 @@ function renderBars(color, data) {
         .merge(annot)
         .text(function(d) {return d.value;})
         .attr("class", "barlabel")
+        .attr("font-size", barfont)
         .attr("x", function(d) { return x(d.id) + x.bandwidth()/2 -30; })
         .attr("y", function(d) { return y(d.value) - 5 })
         .attr("fill","black");
@@ -248,12 +256,12 @@ function legendMouseOut(color, data) {
 }
 
 // sorts an array of equally structured objects by a key
-function sortArrObj(arr,sortkey) {
+function sortArrObj(arr,sortkey, numbars) {
 
   var result = arr.sort(function(a, b) {
   return b.value - a.value;
   });
-  return result.slice(0,30);
+  return result.slice(0,numbars);
 }
 
 // pairs neighboring elements in array of quantile bins
