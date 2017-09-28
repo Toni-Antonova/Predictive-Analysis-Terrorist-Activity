@@ -179,12 +179,120 @@
 
   <script>
 
-     if (svgBarsWidth <= 500) {
-      document.getElementById("container").style.height = '25%';}
-    else if (svgBarsWidth > 500 & svgBarsWidth <=800) {
-      document.getElementById("container").style.height = '50%';}
+    var winWidth = Math.ceil(window.innerWidth)
+    || Math.ceil(document.documentElement.clientWidth)
+    || Math.ceil(document.body.clientWidth);
+
+    var winHeight = Math.ceil(window.innerHeight)
+    || Math.ceil(document.documentElement.clientHeight)
+    || Math.ceil(document.body.clientHeight);
+
+
+if (winWidth <= 600) {
+  barfont = '7pt';
+  barnum = 18;}
+else if (winWidth > 600 & winWidth <=800) {
+  barfont = '7pt';
+  barnum = 25;}
+else if (winWidth > 800 & winWidth <=1000) {
+  barfont = '8pt';
+  barnum = 30;}
+else if (winWidth > 100 & winWidth <= 1200){
+  barfont = '8pt';
+  barnum = 30;}
+else if (winWidth > 1200 & winWidth <= 1500){
+  barfont = '9pt';
+  barnum = 35;}
+else{
+  barfont = '9pt';
+  barnum = 35;}
+
+
+if (winHeight >= 800){
+    if (winWidth <= 600) {
+      document.getElementById("container").style.height = '35%';
+      barfont = '7pt';
+      barnum = 20;}
+    else if (winWidth > 600 & winWidth <=800) {
+      document.getElementById("container").style.height = '40%';
+      barfont = '7pt';
+      barnum = 25;}
+    else if (winWidth > 800 & winWidth <=1000) {
+      document.getElementById("container").style.height = '48%';
+      barfont = '8pt';
+      barnum = 30;}
+    else if (winWidth > 100 & winWidth <= 1200){
+      document.getElementById("container").style.height = '60%';
+      barfont = '8pt';
+      barnum = 30;}
+    else if (winWidth > 1200 & winWidth <= 1500){
+      document.getElementById("container").style.height = '69%';
+      barfont = '9pt';
+      barnum = 35;}
     else{
-      document.getElementById("container").style.height = '68%';}
+      document.getElementById("container").style.height = '85%';
+      barfont = '9pt';
+      barnum = 35;}
+}
+else if (winHeight >= 700 & winHeight< 800){
+    if (winWidth <= 650) {
+      document.getElementById("container").style.height = '45%';}
+    else if (winWidth > 650 & winWidth <=850) {
+      document.getElementById("container").style.height = '55%';}
+    else if (winWidth > 850 & winWidth <=1050) {
+      document.getElementById("container").style.height = '65%';}
+    else if (winWidth > 1050 & winWidth <= 1250){
+      document.getElementById("container").style.height = '80%';}
+    else if (winWidth > 1250 & winWidth <= 1500){
+      document.getElementById("container").style.height = '90%';}
+    else{
+      document.getElementById("container").style.height = '110%';}
+}
+
+else if (winHeight > 600 & winHeight <= 700){
+    if (winWidth <= 650) {
+      document.getElementById("container").style.height = '48%';}
+    else if (winWidth > 650 & winWidth <=850) {
+      document.getElementById("container").style.height = '60%';}
+    else if (winWidth > 850 & winWidth <=1050) {
+      document.getElementById("container").style.height = '75%';}
+    else if (winWidth > 1050 & winWidth <= 1250){
+      document.getElementById("container").style.height = '95%';}
+    else if (winWidth > 1250 & winWidth <= 1500){
+      document.getElementById("container").style.height = '110%';}
+    else{
+      document.getElementById("container").style.height = '125%';}
+}
+
+else if (winHeight > 500 & winHeight <= 600){
+    if (winWidth <= 650) {
+      document.getElementById("container").style.height = '58%';}
+    else if (winWidth > 650 & winWidth <=850) {
+      document.getElementById("container").style.height = '70%';}
+    else if (winWidth > 850 & winWidth <=1050) {
+      document.getElementById("container").style.height = '90%';}
+    else if (winWidth > 1050 & winWidth <= 1250){
+      document.getElementById("container").style.height = '105%';}
+    else if (winWidth > 1250 & winWidth <= 1500){
+      document.getElementById("container").style.height = '130%';}
+    else{
+      document.getElementById("container").style.height = '150%';}
+}
+
+else{
+    if (winWidth <= 650) {
+      document.getElementById("container").style.height = '75%';}
+    else if (winWidth > 650 & winWidth <=850) {
+      document.getElementById("container").style.height = '95%';}
+    else if (winWidth > 850 & winWidth <=1050) {
+      document.getElementById("container").style.height = '115%';}
+    else if (winWidth > 1050 & winWidth <= 1250){
+      document.getElementById("container").style.height = '135%';}
+    else if (winWidth > 1250 & winWidth <= 1500){
+      document.getElementById("container").style.height = '160%';}
+    else{
+      document.getElementById("container").style.height = '185%';}
+}
 
     d3.select(window)
           .on("resize", sizeChange);
@@ -233,7 +341,6 @@
     var svgBarsHeight = Math.ceil(window.innerHeight/6)
     || Math.ceil(document.documentElement.clientHeight/6)
     || Math.ceil(document.body.clientHeight/6);
-
 
     var x = d3.scaleBand()
                 .rangeRound([0, svgBarsWidth])
