@@ -188,9 +188,12 @@
     || Math.ceil(document.body.clientHeight);
 
 
-if (winWidth <= 600) {
-  barfont = '7pt';
-  barnum = 18;}
+if (winWidth <= 450) {
+  barfont = '6pt';
+  barnum = 15;}
+else if (winWidth > 450 & winWidth <=600) {
+  barfont = '6pt';
+  barnum = 15;}
 else if (winWidth > 600 & winWidth <=800) {
   barfont = '7pt';
   barnum = 25;}
@@ -210,29 +213,17 @@ else{
 
 if (winHeight >= 800){
     if (winWidth <= 600) {
-      document.getElementById("container").style.height = '35%';
-      barfont = '7pt';
-      barnum = 20;}
+      document.getElementById("container").style.height = '35%';}
     else if (winWidth > 600 & winWidth <=800) {
-      document.getElementById("container").style.height = '40%';
-      barfont = '7pt';
-      barnum = 25;}
+      document.getElementById("container").style.height = '40%';}
     else if (winWidth > 800 & winWidth <=1000) {
-      document.getElementById("container").style.height = '48%';
-      barfont = '8pt';
-      barnum = 30;}
+      document.getElementById("container").style.height = '48%';}
     else if (winWidth > 100 & winWidth <= 1200){
-      document.getElementById("container").style.height = '60%';
-      barfont = '8pt';
-      barnum = 30;}
+      document.getElementById("container").style.height = '60%';}
     else if (winWidth > 1200 & winWidth <= 1500){
-      document.getElementById("container").style.height = '69%';
-      barfont = '9pt';
-      barnum = 35;}
+      document.getElementById("container").style.height = '69%';}
     else{
-      document.getElementById("container").style.height = '85%';
-      barfont = '9pt';
-      barnum = 35;}
+      document.getElementById("container").style.height = '85%';}
 }
 else if (winHeight >= 700 & winHeight< 800){
     if (winWidth <= 650) {
