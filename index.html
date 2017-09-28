@@ -187,8 +187,10 @@
     || Math.ceil(document.documentElement.clientHeight)
     || Math.ceil(document.body.clientHeight);
 
-
-if (winWidth <= 600) {
+if (winWidth <= 450){
+  barfont = '6pt';
+  barnum = 18;}
+else if (winWidth > 450 & winWidth <= 600) {
   barfont = '7pt';
   barnum = 18;}
 else if (winWidth > 600 & winWidth <=800) {
