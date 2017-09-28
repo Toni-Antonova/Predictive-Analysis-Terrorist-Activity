@@ -159,15 +159,7 @@ function renderBars(color, data) {
   }
 
   // sort by value, how many bars to show
-  if (svgBarsWidth <= 500) {
-      barfont = "8pt";
-      array = sortArrObj(array, 'value', 15);}
-  else if (svgBarsWidth > 500 & svgBarsWidth <=800) {
-      barfont = "8pt";
-      array = sortArrObj(array, 'value', 30);}
-  else{
-      barfont = "9pt";
-      array = sortArrObj(array, 'value', 30);}
+  array = sortArrObj(array, 'value', barnum);
 
   x.domain(array.map(function(d) {return d.id;}));
   y.domain([0, d3.max(Object.values(data), function(d) {return d;})]);
