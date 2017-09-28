@@ -7,7 +7,9 @@
   <title></title>
   <style>
   @import url('https://fonts.googleapis.com/css?family=Lato');
+    
     html{height:100%;}
+
     body{
       font-family: 'Helvetica Neue Light', Helvetica,sans-serif;
       background-color: #FBFBFB;
@@ -140,10 +142,12 @@
     letter-spacing:.4em;
   }
   .barlabel {
-    font-size:8pt;
-    text-anchor: middle;
+   text-anchor: middle;
   }
 
+  #bars, .bars{
+/*    min-width: 1000px;*/
+  }
   #map, .map{
     position:absolute;
     top:100;
@@ -153,8 +157,8 @@
 
     #container {
  /*     top:800px;*/
-    height:65%;
-/*    margin:0 auto;*/
+/*    height:65%;
+*//*    margin:0 auto;*/
 /*    padding:20px;*/
 /*    border:2px solid #d0d0d0;
     border-radius: 5px;*/
@@ -175,6 +179,13 @@
 
   <script>
 
+     if (svgBarsWidth <= 500) {
+      document.getElementById("container").style.height = '25%';}
+    else if (svgBarsWidth > 500 & svgBarsWidth <=800) {
+      document.getElementById("container").style.height = '50%';}
+    else{
+      document.getElementById("container").style.height = '68%';}
+
     d3.select(window)
           .on("resize", sizeChange);
 
@@ -194,12 +205,6 @@
 
     d3.select("#container").insert("h2", ":first-child").text(headline);
     d3.select("#container").insert("h3",).text(init_year);
-
-    var x = document.getElementsByTagName("DIV")[0];
-
-    if (x.id == "container") { 
-        x.setAttribute('height', window.innerHeight);
-    }
 
     // init map container, projection
     var path = d3.geoPath(d3.geoRobinson());
@@ -228,6 +233,7 @@
     var svgBarsHeight = Math.ceil(window.innerHeight/6)
     || Math.ceil(document.documentElement.clientHeight/6)
     || Math.ceil(document.body.clientHeight/6);
+
 
     var x = d3.scaleBand()
                 .rangeRound([0, svgBarsWidth])
@@ -269,11 +275,9 @@
         .append("title")
           .call(setPathTitle, data);
 
-      // init legend
+      // init rest
       renderLegend(color, data);
       renderBars(color, data);
-
-      //init comment
       renderComment(color,data);
 
       });
