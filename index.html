@@ -155,15 +155,6 @@
     z-index:-1;
   }
 
-    #container {
- /*     top:800px;*/
-/*    height:65%;
-*//*    margin:0 auto;*/
-/*    padding:20px;*/
-/*    border:2px solid #d0d0d0;
-    border-radius: 5px;*/
-  }
-
   </style>
 </head>
 
@@ -189,7 +180,7 @@
 
 
 if (winWidth <= 600){
-  barfont = '6pt';
+  barfont = '5pt';
   barnum = 18;}
 else if (winWidth > 600 & winWidth <=800) {
   barfont = '7pt';
@@ -283,7 +274,7 @@ if (winWidth > 600){
     }
   }
 else{
-  document.getElementById("container").style.height = "34%";}
+  document.getElementById("container").style.height = "25%";}
 
     d3.select(window)
           .on("resize", sizeChange);
