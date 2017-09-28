@@ -187,7 +187,7 @@
     || Math.ceil(document.documentElement.clientHeight)
     || Math.ceil(document.body.clientHeight);
 
-
+    
 if (winWidth <= 450) {
   barfont = '6pt';
   barnum = 15;}
@@ -270,7 +270,7 @@ else if (winHeight > 500 & winHeight <= 600){
       document.getElementById("container").style.height = '150%';}
 }
 
-else{
+else {
     if (winWidth <= 650) {
       document.getElementById("container").style.height = '75%';}
     else if (winWidth > 650 & winWidth <=850) {
@@ -284,12 +284,15 @@ else{
     else{
       document.getElementById("container").style.height = '185%';}
 }
-
+    
+if (winWidth < 450){
+ document.getElementById("container").style.height = '50%';}
+    
     d3.select(window)
           .on("resize", sizeChange);
 
     var color_na = d3.rgb("#d4d4d4");
-    var quantiles = [0, 0.2, 0.4, 0.6, 0.8, 1];
+    var quantiles = [0, 0.2, 0}.4, 0.6, 0.8, 1];
     var init_year = 2016;
     var headline = "terror incidents per nation each year";
 
