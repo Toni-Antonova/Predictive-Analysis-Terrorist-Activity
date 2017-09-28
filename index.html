@@ -188,19 +188,16 @@
     || Math.ceil(document.body.clientHeight);
 
 
-if (winWidth <= 450){
-  barfont = '5pt';
-  barnum = 18;}
-else if (winWidth > 450 & winWidth <= 600) {
-  barfont = '7pt';
+if (winWidth <= 600){
+  barfont = '6pt';
   barnum = 18;}
 else if (winWidth > 600 & winWidth <=800) {
   barfont = '7pt';
   barnum = 25;}
 else if (winWidth > 800 & winWidth <=1000) {
-  barfont = '8pt';
+  barfont = '7pt';
   barnum = 30;}
-else if (winWidth > 100 & winWidth <= 1200){
+else if (winWidth > 1000 & winWidth <= 1200){
   barfont = '8pt';
   barnum = 30;}
 else if (winWidth > 1200 & winWidth <= 1500){
@@ -210,7 +207,7 @@ else{
   barfont = '9pt';
   barnum = 35;}
 
-if (winWidth > 450){
+if (winWidth > 600){
     if (winHeight >= 800){
         if (winWidth <= 600) {
           document.getElementById("container").style.height = '35%';}
@@ -286,7 +283,7 @@ if (winWidth > 450){
     }
   }
 else{
-  document.getElementById("container").style.height = "30%";}
+  document.getElementById("container").style.height = "34%";}
 
     d3.select(window)
           .on("resize", sizeChange);
