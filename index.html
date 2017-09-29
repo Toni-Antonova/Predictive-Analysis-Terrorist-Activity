@@ -186,7 +186,7 @@
   || Math.ceil(document.body.clientHeight);
 
 
-if (winWidth <= 600){
+if (winWidth <= 500){
 
   barfont = '3.5pt';
   barnum = 20;
@@ -200,6 +200,10 @@ if (winWidth <= 600){
 || Math.ceil(document.documentElement.clientHeight/12)
 || Math.ceil(document.body.clientHeight/12);}
     
+else if (winWidth > 500 & winWidth <=600) {
+  barfont = '6pt';
+  barnum = 25;  
+  countryfont = '6pt';
 else if (winWidth > 600 & winWidth <=800) {
   barfont = '7pt';
   barnum = 25;  
@@ -221,20 +225,20 @@ else{
   barnum = 35;
   countryfont = '9pt';}
 
-if (winWidth > 600){
+if (winWidth > 500){
     if (winHeight >= 800){
         if (winWidth <= 600) {
-          document.getElementById("container").style.height = '35%';}
+          document.getElementById("container").style.height = '16%';}
         else if (winWidth > 600 & winWidth <=800) {
           document.getElementById("container").style.height = '40%';}
         else if (winWidth > 800 & winWidth <=1000) {
           document.getElementById("container").style.height = '48%';}
         else if (winWidth > 1000 & winWidth <= 1200){
-          document.getElementById("container").style.height = '60%';}
+          document.getElementById("container").style.height = '65%';}
         else if (winWidth > 1200 & winWidth <= 1500){
-          document.getElementById("container").style.height = '69%';}
+          document.getElementById("container").style.height = '75%';}
         else{
-          document.getElementById("container").style.height = '85%';}
+          document.getElementById("container").style.height = '90%';}
     }
     else if (winHeight >= 700 & winHeight< 800){
         if (winWidth <= 650) {
@@ -244,11 +248,11 @@ if (winWidth > 600){
         else if (winWidth > 850 & winWidth <=1050) {
           document.getElementById("container").style.height = '65%';}
         else if (winWidth > 1050 & winWidth <= 1250){
-          document.getElementById("container").style.height = '80%';}
+          document.getElementById("container").style.height = '85%';}
         else if (winWidth > 1250 & winWidth <= 1500){
-          document.getElementById("container").style.height = '90%';}
+          document.getElementById("container").style.height = '95%';}
         else{
-          document.getElementById("container").style.height = '110%';}
+          document.getElementById("container").style.height = '115%';}
     }
 
     else if (winHeight > 600 & winHeight <= 700){
@@ -259,11 +263,11 @@ if (winWidth > 600){
         else if (winWidth > 850 & winWidth <=1050) {
           document.getElementById("container").style.height = '75%';}
         else if (winWidth > 1050 & winWidth <= 1250){
-          document.getElementById("container").style.height = '95%';}
+          document.getElementById("container").style.height = '100%';}
         else if (winWidth > 1250 & winWidth <= 1500){
-          document.getElementById("container").style.height = '110%';}
+          document.getElementById("container").style.height = '115%';}
         else{
-          document.getElementById("container").style.height = '125%';}
+          document.getElementById("container").style.height = '130%';}
     }
 
     else if (winHeight > 500 & winHeight <= 600){
@@ -274,11 +278,11 @@ if (winWidth > 600){
         else if (winWidth > 850 & winWidth <=1050) {
           document.getElementById("container").style.height = '90%';}
         else if (winWidth > 1050 & winWidth <= 1250){
-          document.getElementById("container").style.height = '105%';}
+          document.getElementById("container").style.height = '110%';}
         else if (winWidth > 1250 & winWidth <= 1500){
-          document.getElementById("container").style.height = '130%';}
+          document.getElementById("container").style.height = '135%';}
         else{
-          document.getElementById("container").style.height = '150%';}
+          document.getElementById("container").style.height = '155%';}
     }
 
     else{
@@ -324,7 +328,7 @@ else{
     d3.select("#container").insert("h2", ":first-child").attr('id', 'headline').text(headline);
     d3.select("#container").insert("h3",).attr('id', 'yeartxt').text(init_year);
 
-    if (winWidth <= 600){
+    if (winWidth <= 500){
       document.getElementById('headline').style.fontSize = '8pt';
       document.getElementById('headline').style.padding = '0 55px 0 0';
       document.getElementById('year').style.padding = '0 55px 0 0';
