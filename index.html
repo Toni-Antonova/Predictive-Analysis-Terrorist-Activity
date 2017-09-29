@@ -34,6 +34,8 @@
       font-size: 20pt;
       letter-spacing: 2px;
       padding: 0px;
+      margin: 0 auto;
+      text-align:center;
     }
 
     h3 {
@@ -302,6 +304,7 @@ if (winWidth > 600){
     }
   }
 else{
+  document.getElementById("headline").style.fontSize = "12pt";
   document.getElementById("container").style.height = "25%";
     function sizeChange() {
       d3.select("g").attr("transform", "scale(" + $("#container").width()/1200 + ")");
@@ -325,7 +328,7 @@ else{
         .attr("value", init_year)
         .attr("id", "year");
 
-    d3.select("#container").insert("h2", ":first-child").text(headline);
+    d3.select("#container").insert("h2", ":first-child").text(headline).attr("id", "headline");
     d3.select("#container").insert("h3",).text(init_year);
 
     // init map container, projection
