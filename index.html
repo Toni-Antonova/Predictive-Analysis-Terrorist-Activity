@@ -298,7 +298,7 @@ if (winWidth > 600){
   }
 else{
 
-  document.getElementById("container").style.height = "15%";
+  document.getElementById("container").style.height = "16%";
     function sizeChange() {
       d3.select("g").attr("transform", "scale(" + $("#container").width()/1200 + ")");
       $("svg").height($("#container").width()*0.618);}
@@ -328,7 +328,8 @@ else{
       document.getElementById('headline').style.fontSize = '8pt';
       document.getElementById('headline').style.padding = '0 55px 0 0';
       document.getElementById('year').style.padding = '0 55px 0 0';
-      document.getElementById('yeartxt').style.fontSize = '7pt';
+      document.getElementById('yeartxt').style.padding = '0 55px 0 0';
+      document.getElementById('yeartxt').style.fontSize = '6pt';
     }
     else{
       document.getElementById('headline').style.fontSize = '20pt';
