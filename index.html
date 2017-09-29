@@ -36,7 +36,6 @@
     }
 
     h3 {
-      font-size: 16pt;
       letter-spacing: 2.5px;
       padding: 0px 30px 10px 5px;
     }
@@ -189,9 +188,9 @@
 
 if (winWidth <= 600){
 
-  barfont = '5pt';
+  barfont = '4pt';
   barnum = 20;
-  countryfont = '5pt';
+  countryfont = '4pt';
   
   svgBarsWidth = Math.ceil(window.innerWidth/1.1)
 || Math.ceil(document.documentElement.clientWidth/1.1)
@@ -299,7 +298,7 @@ if (winWidth > 600){
   }
 else{
 
-  document.getElementById("container").style.height = "22%";
+  document.getElementById("container").style.height = "21%";
     function sizeChange() {
       d3.select("g").attr("transform", "scale(" + $("#container").width()/1200 + ")");
       $("svg").height($("#container").width()*0.618);}
@@ -323,15 +322,17 @@ else{
         .attr("id", "year");
 
     d3.select("#container").insert("h2", ":first-child").attr('id', 'headline').text(headline);
-    d3.select("#container").insert("h3",).text(init_year);
+    d3.select("#container").insert("h3",).attr('id', 'yeartxt').text(init_year);
 
     if (winWidth <= 600){
       document.getElementById('headline').style.fontSize = '8pt';
-      document.getElementById('headline').style.padding = '0 30px 0 0';
-      document.getElementById('year').style.padding = '0 30px 0 0';
+      document.getElementById('headline').style.padding = '0 40px 0 0';
+      document.getElementById('year').style.padding = '0 40px 0 0';
+      document.getElementById('yeartxt').style.fontSize = '5pt';
     }
     else{
       document.getElementById('headline').style.fontSize = '20pt';
+      document.getElementById('yeartxt').style.fontSize = '16pt';
     }
 
     // init map container, projection
