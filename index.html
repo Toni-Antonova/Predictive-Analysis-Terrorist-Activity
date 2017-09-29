@@ -155,6 +155,15 @@
     z-index:-1;
   }
 
+    #container {
+ /*     top:800px;*/
+/*    height:65%;
+*//*    margin:0 auto;*/
+/*    padding:20px;*/
+/*    border:2px solid #d0d0d0;
+    border-radius: 5px;*/
+  }
+
   </style>
 </head>
 
@@ -180,23 +189,29 @@
 
 
 if (winWidth <= 600){
-  barfont = '5pt';
-  barnum = 15;}
+  barfont = '6pt';
+  barnum = 18;
+  countryfont = '6pt';}
 else if (winWidth > 600 & winWidth <=800) {
   barfont = '7pt';
-  barnum = 25;}
+  barnum = 25;  
+  countryfont = '7pt';}
 else if (winWidth > 800 & winWidth <=1000) {
   barfont = '7pt';
-  barnum = 30;}
+  barnum = 30;
+  countryfont = '7pt';}
 else if (winWidth > 1000 & winWidth <= 1200){
   barfont = '8pt';
-  barnum = 30;}
+  barnum = 30;
+  countryfont = '8pt';}
 else if (winWidth > 1200 & winWidth <= 1500){
   barfont = '9pt';
-  barnum = 35;}
+  barnum = 35;
+  countryfont = '9pt';}
 else{
   barfont = '9pt';
-  barnum = 35;}
+  barnum = 35;
+  countryfont = '9pt';}
 
 if (winWidth > 600){
     if (winHeight >= 800){
@@ -274,7 +289,7 @@ if (winWidth > 600){
     }
   }
 else{
-  document.getElementById("container").style.height = "25%";}
+  document.getElementById("container").style.height = "26%";}
 
     d3.select(window)
           .on("resize", sizeChange);
