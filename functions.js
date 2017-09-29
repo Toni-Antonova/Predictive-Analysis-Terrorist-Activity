@@ -174,7 +174,8 @@ function renderBars(color, data) {
                   .style("text-anchor", "end")
                   .attr("dx", "-.8em")
                   .attr("dy", ".15em")
-                  .attr("transform", "rotate(-65)");
+                  .attr("transform", "rotate(-65)")
+                  .attr('font-size',countryfont);
 
   let bars = d3.select("svg#bars g.bars").selectAll("rect").data(array);
   bars.exit().remove();
