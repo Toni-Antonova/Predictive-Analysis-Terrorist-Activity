@@ -179,6 +179,14 @@
 
   <script>
 
+    var svgBarsWidth = Math.ceil(window.innerWidth/1.2)
+    || Math.ceil(document.documentElement.clientWidth/1.2)
+    || Math.ceil(document.body.clientWidth/1.2);
+
+    var svgBarsHeight = Math.ceil(window.innerHeight/6)
+    || Math.ceil(document.documentElement.clientHeight/6)
+    || Math.ceil(document.body.clientHeight/6);
+
     var winWidth = Math.ceil(window.innerWidth)
     || Math.ceil(document.documentElement.clientWidth)
     || Math.ceil(document.body.clientWidth);
@@ -190,8 +198,17 @@
 
 if (winWidth <= 600){
   barfont = '5pt';
-  barnum = 15;
-  countryfont = '5pt';}
+  barnum = 20;
+  countryfont = '5pt';
+  
+  svgBarsWidth = Math.ceil(window.innerWidth/1.1)
+|| Math.ceil(document.documentElement.clientWidth/1.1)
+|| Math.ceil(document.body.clientWidth/1.1);
+
+  svgBarsHeight = Math.ceil(window.innerHeight/8)
+|| Math.ceil(document.documentElement.clientHeight/8)
+|| Math.ceil(document.body.clientHeight/8);}
+    
 else if (winWidth > 600 & winWidth <=800) {
   barfont = '7pt';
   barnum = 25;  
@@ -330,14 +347,6 @@ else{
     var margin = {top: 40, right:50, bottom:50, left:30};
     // var svgBarsWidth = 1200 - margin.left - margin.right;
     // var svgBarsHeight = 200 - margin.top - margin.bottom;
-
-    var svgBarsWidth = Math.ceil(window.innerWidth/1.2)
-    || Math.ceil(document.documentElement.clientWidth/1.2)
-    || Math.ceil(document.body.clientWidth/1.2);
-
-    var svgBarsHeight = Math.ceil(window.innerHeight/6)
-    || Math.ceil(document.documentElement.clientHeight/6)
-    || Math.ceil(document.body.clientHeight/6);
 
     var x = d3.scaleBand()
                 .rangeRound([0, svgBarsWidth])
