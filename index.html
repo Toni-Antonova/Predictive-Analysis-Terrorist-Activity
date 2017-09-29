@@ -33,7 +33,7 @@
     h2 {
       font-size: 20pt;
       letter-spacing: 2px;
-      padding: 0px 30px;
+      padding: 0px;
     }
 
     h3 {
@@ -302,7 +302,7 @@ if (winWidth > 600){
     }
   }
 else{
-  document.getElementById("container").style.height = "30%";
+  document.getElementById("container").style.height = "25%";
     function sizeChange() {
       d3.select("g").attr("transform", "scale(" + $("#container").width()/1200 + ")");
       $("svg").height($("#container").width()*0.618);}
