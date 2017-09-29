@@ -178,6 +178,10 @@
   <script src="functions.js"></script>
 
   <script>
+    
+        function sizeChange() {
+      d3.select("g").attr("transform", "scale(" + $("#container").width()/900 + ")");
+      $("svg").height($("#container").width()*0.618);}
 
     var svgBarsWidth = Math.ceil(window.innerWidth/1.2)
     || Math.ceil(document.documentElement.clientWidth/1.2)
@@ -307,7 +311,11 @@ if (winWidth > 600){
     }
   }
 else{
-  document.getElementById("container").style.height = "30%";}
+  document.getElementById("container").style.height = "30%";
+    function sizeChange() {
+      d3.select("g").attr("transform", "scale(" + $("#container").width()/500 + ")");
+      $("svg").height($("#container").width()*0.618);}
+}
 
     d3.select(window)
           .on("resize", sizeChange);
@@ -406,10 +414,6 @@ else{
       });
 
     }); 
-
-    function sizeChange() {
-      d3.select("g").attr("transform", "scale(" + $("#container").width()/900 + ")");
-      $("svg").height($("#container").width()*0.618);}
 
   </script>
 </body>
