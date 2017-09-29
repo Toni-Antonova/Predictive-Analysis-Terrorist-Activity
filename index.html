@@ -144,9 +144,6 @@
    text-anchor: middle;
   }
 
-  #bars, .bars{
-/*    min-width: 1000px;*/
-  }
   #map, .map{
     position:absolute;
     top:100;
@@ -303,7 +300,7 @@ if (winWidth > 600){
   }
 else{
 
-  document.getElementById("container").style.height = "25%";
+  document.getElementById("container").style.height = "20%";
     function sizeChange() {
       d3.select("g").attr("transform", "scale(" + $("#container").width()/1200 + ")");
       $("svg").height($("#container").width()*0.618);}
@@ -333,7 +330,7 @@ else{
       document.getElementById('headline').style.fontSize = '10pt';
     }
     else{
-      document.getElementById('headline').style.fontSize = '15pt';
+      document.getElementById('headline').style.fontSize = '10pt';
     }
 
     // init map container, projection
