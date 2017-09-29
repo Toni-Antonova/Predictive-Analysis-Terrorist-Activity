@@ -31,7 +31,7 @@
     }
 
     h2 {
-      font-size: 20pt;
+/*      font-size: 20pt;*/
       letter-spacing: 2px;
       padding: 0px;
     }
@@ -41,7 +41,6 @@
       letter-spacing: 2.5px;
       padding: 0px 30px 10px 5px;
     }
-
 
   input[type=range] {
       -webkit-appearance: none;
@@ -159,7 +158,8 @@
 </head>
 
 <body onload="sizeChange()">
-      <div id="container"></div>
+
+  <div id="container"></div>
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/topojson.v2.min.js"></script>
@@ -170,33 +170,33 @@
 
   <script>
     
-        function sizeChange() {
-      d3.select("g").attr("transform", "scale(" + $("#container").width()/900 + ")");
-      $("svg").height($("#container").width()*0.618);}
+  function sizeChange() {
+  d3.select("g").attr("transform", "scale(" + $("#container").width()/900 + ")");
+  $("svg").height($("#container").width()*0.618);}
 
-    var svgBarsWidth = Math.ceil(window.innerWidth/1.2)
-    || Math.ceil(document.documentElement.clientWidth/1.2)
-    || Math.ceil(document.body.clientWidth/1.2);
+  var svgBarsWidth = Math.ceil(window.innerWidth/1.2)
+  || Math.ceil(document.documentElement.clientWidth/1.2)
+  || Math.ceil(document.body.clientWidth/1.2);
 
-    var svgBarsHeight = Math.ceil(window.innerHeight/6)
-    || Math.ceil(document.documentElement.clientHeight/6)
-    || Math.ceil(document.body.clientHeight/6);
+  var svgBarsHeight = Math.ceil(window.innerHeight/6)
+  || Math.ceil(document.documentElement.clientHeight/6)
+  || Math.ceil(document.body.clientHeight/6);
 
-    var winWidth = Math.ceil(window.innerWidth)
-    || Math.ceil(document.documentElement.clientWidth)
-    || Math.ceil(document.body.clientWidth);
+  var winWidth = Math.ceil(window.innerWidth)
+  || Math.ceil(document.documentElement.clientWidth)
+  || Math.ceil(document.body.clientWidth);
 
-    var winHeight = Math.ceil(window.innerHeight)
-    || Math.ceil(document.documentElement.clientHeight)
-    || Math.ceil(document.body.clientHeight);
+  var winHeight = Math.ceil(window.innerHeight)
+  || Math.ceil(document.documentElement.clientHeight)
+  || Math.ceil(document.body.clientHeight);
 
 
 if (winWidth <= 600){
+
   barfont = '5pt';
   barnum = 20;
   countryfont = '5pt';
   
-
   svgBarsWidth = Math.ceil(window.innerWidth/1.1)
 || Math.ceil(document.documentElement.clientWidth/1.1)
 || Math.ceil(document.body.clientWidth/1.1);
@@ -302,16 +302,7 @@ if (winWidth > 600){
     }
   }
 else{
-  var headers = document.getElementsByTagName("h2");
 
-for (var i in headers)
-{
-    headers[i] = function()
-    {
-        this.style.fontSize = '12pt';
-    }
-}
-  
   document.getElementById("container").style.height = "25%";
     function sizeChange() {
       d3.select("g").attr("transform", "scale(" + $("#container").width()/1200 + ")");
@@ -335,8 +326,15 @@ for (var i in headers)
         .attr("value", init_year)
         .attr("id", "year");
 
-    d3.select("#container").insert("h2", ":first-child").text(headline);
+    d3.select("#container").insert("h2", ":first-child").attr('id', 'headline').text(headline);
     d3.select("#container").insert("h3",).text(init_year);
+
+    if (winWidth <= 600){
+      document.getElementById('headline').style.fontSize = '10pt';
+    }
+    else{
+      document.getElementById('headline').style.fontSize = '15pt';
+    }
 
     // init map container, projection
     var path = d3.geoPath(d3.geoRobinson());
