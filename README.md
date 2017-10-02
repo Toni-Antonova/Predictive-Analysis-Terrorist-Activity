@@ -17,12 +17,12 @@ scikit-learn
 XGBoost  
 
 ***
-'''html  
-<div id = "video-container">
 
-<iframe src="https://cdn.rawgit.com/Toni-Antonova/Predictive-Analysis-Terrorist-Activity/d2beb08/index.html" frameborder="0" scrolling="no" height="780" width="1100" allowfullscreen=""></iframe>
-
-</div>
+<div id = "video-container">  
+  
+<iframe src="https://cdn.rawgit.com/Toni-Antonova/Predictive-Analysis-Terrorist-Activity/d2beb08/index.html" frameborder="0" scrolling="no" height="780" width="1100" allowfullscreen=""></iframe>  
+  
+</div>  
 
 <style>
 #video-container {
