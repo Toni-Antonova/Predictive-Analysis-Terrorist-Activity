@@ -19,12 +19,12 @@ XGBoost
 ***
 
 <div id = "video-container">  
+    
+<iframe src="https://cdn.rawgit.com/Toni-Antonova/Predictive-Analysis-Terrorist-Activity/d2beb08/index.html" frameborder="0" scrolling="no" height="780" width="1100" allowfullscreen=""></iframe>    
+    
+</div>    
   
-<iframe src="https://cdn.rawgit.com/Toni-Antonova/Predictive-Analysis-Terrorist-Activity/d2beb08/index.html" frameborder="0" scrolling="no" height="780" width="1100" allowfullscreen=""></iframe>  
-  
-</div>  
-
-<style>
+<style>  
 #video-container {
     position: relative;
     padding-bottom: 70.9%;
@@ -38,22 +38,4 @@ XGBoost
     top:0;
     left: 0;
     width: 100%;
-    height: 100%;
-}
-
-</style>
-
-<script>
-    var winWidth = Math.ceil(window.innerWidth)
-    || Math.ceil(document.documentElement.clientWidth)
-    || Math.ceil(document.body.clientWidth);
-
-    var winHeight = Math.ceil(window.innerHeight)
-    || Math.ceil(document.documentElement.clientHeight)
-    || Math.ceil(document.body.clientHeight);
-
-        if (winWidth <= 600) {
-          document.getElementById("video-container").style.   padding = '0 0 300% 0';}
-</script>
-'''
-
+    heig
