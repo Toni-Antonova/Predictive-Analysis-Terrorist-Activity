@@ -18,24 +18,4 @@ XGBoost
 
 ***
 
-<div id = "video-container">  
-    
-<iframe src="https://cdn.rawgit.com/Toni-Antonova/Predictive-Analysis-Terrorist-Activity/d2beb08/index.html" frameborder="0" scrolling="no" height="780" width="1100" allowfullscreen=""></iframe>    
-    
-</div>    
-  
-<style>  
-#video-container {
-    position: relative;
-    padding-bottom: 70.9%;
-    padding-top: 0px;
-    height: 0;
-    overflow: scroll;
-}
-
-#video-container iframe {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    heig
+#### Check out my mobile-responsive D3 Visualization showing a map of terror incidents through history [here](https://antonia.space/geography-of-terror/).
