@@ -18,4 +18,4 @@ XGBoost
 
 ***
 
-#### Check out my mobile-responsive D3 Visualization showing a [Map of Terror Incidents Through History](https://antonia.space/geography-of-terror/)!
+#### Check out my mobile-responsive D3 Visualization showing a [Map of Terror Incidents Through History](https://antonia.space/geography-of-terror/).
